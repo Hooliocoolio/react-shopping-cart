@@ -1,5 +1,5 @@
 # Module Project: Context API - Shopping Cart
-
+Hoolio
 In this module you will take your newfound knowledge of `Context API` and refactor a e-commerce store to use `Context API` as well as extend the functionality of the application making it more robust!
 
 ## Instructions
@@ -76,7 +76,7 @@ Before you get started, please take a few minutes and get acquainted with this a
 **Before**
 
 ```js
-<Route exact path="/">
+  <Route exact path="/">
   <Products products={products} addItem={addItem} />
 </Route>
 ```
@@ -106,7 +106,7 @@ const { products, addItem } = useContext(ProductContext);
 - Now that we have all of the data we need we can refactor our `Products` component from using props.
 
 - To do so we just need to remove every instance of `props`.
-
+np
   - Remove it from the function parameters
   - Remove it from the products map
   - Remove it from addItem prop
