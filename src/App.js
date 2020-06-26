@@ -17,20 +17,44 @@ function App() {
 		// add the given item to the cart
 		setCart([...cart, item]);
 		console.log(setCart)
+		window.localStorage.setItem( setCart, "myValue"); 
 	};
 
+	const removeItem = (item) => {
+		let reStock = cart.filter(value => {
+			return value !== item
+		})
+
+		setCart(reStock)
+	};
+ 
+
 	return (
+			
 		<div className="App">
-		<ProductContext.Provider value={{products, addItem}}>
-			<CartContext.Provider value={{cart}}>
-			<Navigation cart={cart} />
+		<ProductContext.Provider value={{ products, addItem }}>
+			<CartContext.Provider value={{ cart, setCart, removeItem }}>
+			<Navigation  />
+
 			{/* Routes */}
-			<Route exact path="/"><Products /></Route>
-			<Route path="/cart"><ShoppingCart cart={cart} /></Route>
+		
+			<Route exact path="/" component={Products} />
+
+			<Route path="/cart" component={ShoppingCart} />
+				 
+	 
 			</CartContext.Provider>
-		</ProductContext.Provider>
+			</ProductContext.Provider>
 		</div>
 	);
 }
+
+if (typeof(Storage) !== "undefined") {
+	// Code for localStorage/sessionStorage.
+	console.log("does work")
+  } else {
+	// Sorry! No Web Storage support..
+	console.log("does not work")
+  }
 
 export default App;

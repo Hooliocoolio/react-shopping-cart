@@ -15,6 +15,7 @@ const Products = () => {
 					key={product.id}
 					product={product}
 					addItem={addItem}
+				
 				/>
 			))}
 		</div>
