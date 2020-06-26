@@ -106,7 +106,7 @@ const { products, addItem } = useContext(ProductContext);
 - Now that we have all of the data we need we can refactor our `Products` component from using props.
 
 - To do so we just need to remove every instance of `props`.
-
+np
   - Remove it from the function parameters
   - Remove it from the products map
   - Remove it from addItem prop
