@@ -5,4 +5,4 @@ const ProductContext = createContext({
     addItem: () => {}
 })
 
-export default ProductContext;
+export default ProductContext; 

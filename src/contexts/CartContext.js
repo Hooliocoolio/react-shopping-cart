@@ -8,4 +8,4 @@ const CartContext = createContext({
     setCart: () => {}
     })
     
-    export default CartContext
+    export default CartContext 
