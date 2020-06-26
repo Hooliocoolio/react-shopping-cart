@@ -25,9 +25,7 @@ function App() {
 			<Navigation cart={cart} />
 
 			{/* Routes */}
-			<Route exact path="/">
-				<Products products={products} addItem={addItem} />
-			</Route>
+			<Route exact path="/"><Products /></Route>
 
 			<Route path="/cart">
 				<ShoppingCart cart={cart} />
